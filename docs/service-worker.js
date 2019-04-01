@@ -1,9 +1,9 @@
 importScripts("/precache-manifest.c04958a5630674e79bf134898d1346c6.js");
 
 
-        importScripts('/static/workbox-v3.6.3/workbox-sw.js');
+        importScripts('./static/workbox-v3.6.3/workbox-sw.js');
         workbox.setConfig({
-            modulePathPrefix: '/static/workbox-v3.6.3/'
+            modulePathPrefix: './static/workbox-v3.6.3/'
         });
     /**
  * @file service-worker.js with workbox api
