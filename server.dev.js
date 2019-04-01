@@ -23,10 +23,10 @@ if (process.argv.length >= 3 && process.argv[2] !== 'dev') {
  */
 var proxyTable = {
     // proxy table example
-    // '/api': {
-    //     target: 'https://lavas.baidu.com',
-    //     changeOrigin: true
-    // }
+    '/api': {
+        target: 'https://lavas.baidu.com',
+        changeOrigin: true
+    }
 };
 
 var port = process.env.PORT || 3000;
