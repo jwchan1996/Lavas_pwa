@@ -49,6 +49,16 @@ module.exports = {
 
         // URL of appshell page
         // ONLY works in SSR mode
-        appshellUrl: '/appshell'
+        appshellUrl: '/appshell',
+
+        globDirectory: path.basename(BUILD_PATH),
+        globPatterns: [
+            '**/*.{html,js,css,eot,svg,ttf,woff}'
+        ],
+        globIgnores: [
+            'sw-register.js',
+            '**/*.map'
+        ],
+        dontCacheBustUrlsMatching: /\.\w{8}\./
     }
 };
