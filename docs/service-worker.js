@@ -1,4 +1,4 @@
-importScripts("/precache-manifest.c04958a5630674e79bf134898d1346c6.js");
+importScripts("./precache-manifest.c04958a5630674e79bf134898d1346c6.js");
 
 
         importScripts('./static/workbox-v3.6.3/workbox-sw.js');
@@ -50,4 +50,4 @@ workbox.routing.registerRoute(/^https:\/\/cdn\.baidu\.com/i,
         ]
     })
 );
-workbox.routing.registerNavigationRoute('/index.html');
+workbox.routing.registerNavigationRoute('./index.html');
