@@ -25,16 +25,21 @@ Fast - Respond quickly to user interactions with silky smooth animations and no 
 </template>
 
 <script>
-    import axios from 'axios'
+    import {mapState} from 'vuex'
 
     export default {
         name: 'detail-_id',
-        // 内容省略，和第四节相同
-        async asyncData() {
-            let result = await axios(`https://www.apiopen.top/weatherApi?city=%E5%B9%BF%E5%B7%9E`)
-            let condition = result.data.data
-
-            console.log(`Weather of ${condition.city} : ${condition.wendu}°C`)
+        
+        async asyncData({store, route}) {
+            await store.dispatch('detail/setWeather', {city: '广州'});
+        },
+        computed: {
+            ...mapState('detail', [
+                'weather'
+            ])
+        },
+        created() {
+            console.log(`Weather of ${this.weather.city}, ${this.weather.wendu}°C`);
         }
     }
 </script>
