@@ -1,7 +1,8 @@
 {
-    "start_url": "../?utm_source=homescreen",
+    "start_url": "../index.html?utm_source=homescreen",
     "name": "lavas_pwa",
     "short_name": "lavas_pwa",
+    "scope": "../", 
     "icons": [
         {
             "src": "./img/icons/android-chrome-512x512.png",
