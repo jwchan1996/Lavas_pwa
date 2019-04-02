@@ -4,7 +4,7 @@ function emitUpdate() {
     window.dispatchEvent(event)
 }
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./service-worker.js?v=20190402003341').then(function (reg) {
+    navigator.serviceWorker.register('service-worker.js?v=20190402003341').then(function (reg) {
         if (reg.waiting) {
             emitUpdate();
             return
